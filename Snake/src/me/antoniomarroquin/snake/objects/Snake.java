@@ -75,7 +75,6 @@ public class Snake extends GameObject
 			break;
 		case 3:
 			this.setCoord(this.getCoord().getX() - 1, this.getCoord().getY());
-			
 			break;
 		}
 	}
