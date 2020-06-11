@@ -53,4 +53,14 @@ public abstract class GameObject
 	{
 		return coord;
 	}
+	
+	public void setCoord(int x, int y)
+	{
+		coord.setCoordinate(x, y);
+	}
+	
+	public void setCoord(Coordinate newCoord)
+	{
+		coord = newCoord;
+	}
 }
