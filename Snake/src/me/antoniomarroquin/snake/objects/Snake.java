@@ -45,6 +45,11 @@ public class Snake extends GameObject
 		return endingBody;
 	}
 	
+	public Body getStartingBody()
+	{
+		return startingBody;
+	}
+	
 	/**
 	 * Update the position of the snake and any attached body parts
 	 * @param upDownLeftRight Up = 0, down = 1, right = 2, left = 3.

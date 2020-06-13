@@ -6,7 +6,8 @@ public class Coordinate
 	private int y;
 	
 	public static final int COORDINATESIZE = 32;
-	public static final int MAXBOARDSIZE = COORDINATESIZE * 25;
+	public static final int MAXBOARDSIZESMALL = 24;
+	public static final int MAXBOARDSIZE = COORDINATESIZE * MAXBOARDSIZESMALL;
 	
 	public Coordinate (int x, int y)
 	{
@@ -26,7 +27,7 @@ public class Coordinate
 	}
 
 	public void setX(int x) {
-		if ((x >= 0) && !(x <= MAXBOARDSIZE))
+		if ((x >= 0) && (x <= MAXBOARDSIZESMALL))
 			this.x = x;
 		else
 			System.err.println("Outside of board bounds.");
@@ -37,7 +38,7 @@ public class Coordinate
 	}
 
 	public void setY(int y) {
-		if ((y >= 0) && !(y <= MAXBOARDSIZE))
+		if ((y >= 0) && (y <= MAXBOARDSIZESMALL))
 			this.y = y;
 		else
 			System.err.println("Outside of board bounds.");
@@ -45,12 +46,17 @@ public class Coordinate
 	
 	public void setCoordinate(int x, int y)
 	{
-		if ((x >= 0) && !(x <= MAXBOARDSIZE) && (y >= 0) && !(y <= MAXBOARDSIZE))
+		if ((x >= 0) && (x <= MAXBOARDSIZESMALL) && (y >= 0) && (y <= MAXBOARDSIZESMALL))
 		{
 			this.x = x;
 			this.y = y;
 		}
 		else
 			System.err.println("Outside of board bounds.");
+	}
+	
+	public String toString()
+	{
+		return this.x + ", " + this.y;
 	}
 }
